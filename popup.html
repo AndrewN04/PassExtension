@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="./styles/app.css">
+    <!-- Title of the web page -->
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <!-- Main container for the password generator -->
+    <div class="container">
+        <!-- Section for password settings -->
+        <section class="settings-container">
+            <!-- Setting for including digits in the password -->
+            <div class="setting">
+                <label for="includeDigits">
+                    <span>Include Digits</span>
+                </label>
+                <input type="checkbox" name="" id="includeDigits" checked>
+            </div>
+            <!-- Setting for including capitalization in the password -->
+            <div class="setting">
+                <label for="includeCap">
+                    <span>Include Capitalization</span>
+                </label>
+                <input type="checkbox" name="" id="includeCap" checked>
+            </div>
+            <!-- Setting for including special characters in the password -->
+            <div class="setting">
+                <label for="includeSpec">
+                    <span>Include Special Characters</span>
+                    <span>Ex. !@#$%^&*()</span>
+                </label>
+                <input type="checkbox" name="" id="includeSpec" checked>
+            </div>
+        </section>
+
+        <!-- Section for adjusting the character length of the password -->
+        <section class="character-length">
+            <p>Your password will be <span id="charLengthSpan">20</span> characters long</p>
+            <p>Adjust the length of your password</p>
+            <!-- Slider to adjust the length of the password -->
+            <input type="range" id="charLengthSlider" min="10" max="30" value="20">
+        </section>
+
+        <!-- Section for displaying and copying the generated password -->
+        <section class="generated-password">
+            <!-- Input field to display the generated password -->
+            <input type="text" id="generatedPassword" spellcheck="false">
+            <!-- Button to copy the generated password to clipboard -->
+            <button class="copy-pass" id="copyPass">Copy</button>
+            <!-- Confirmation message for password copy action -->
+            <div class="confirmation" id="confirmation">
+                <p>Password Copied!</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="./scripts/app.js"></script>
+</body>
+
+</html>
